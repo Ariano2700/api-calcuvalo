@@ -48,7 +48,7 @@ public class PlayersControlador {
         return new ResponseEntity<>(jugadorActualizado, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/jugador/eliminado/{id}")
+    @DeleteMapping("/jugador/eliminado/id/{id}")
     public ResponseEntity<HashMap<String, Boolean>> eliminarDatos(@PathVariable long id){
         this.implementacion.eliminar(id);
         HashMap<String, Boolean> estadoJugador = new HashMap<>();
